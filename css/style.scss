@@ -1,0 +1,313 @@
+@import url("reset.css");
+@import url("header.scss");
+@import url("hero.scss");
+@import url("about-us.scss");
+$main-color: #191823;
+$main-bg-color: #f2f8ff;
+$buttom-color: #004996;
+:root {
+    font-size: 16px;
+}
+.wrapper {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+a {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: $main-color;
+    text-wrap: nowrap;
+}
+h1,
+h2 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 130%;
+    color: $main-color;
+    margin: 0.5rem 0;
+}
+h2 {
+    font-size: 1.2rem;
+}
+p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 150%;
+    color: $main-color;
+    margin: 0.5rem 0;
+}
+.button-link {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: $buttom-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.3rem;
+    text-align: center;
+    span {
+        color: white;
+    }
+}
+.button-link-white {
+    background: white;
+    span {
+        color: black;
+        font-size: 0.9rem;
+    }
+}
+main {
+    background-color: $main-bg-color;
+}
+section {
+    padding: 0.5rem;
+}
+.technologys {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.technologys-content {
+    display: flex;
+    gap: 5rem;
+    div {
+        width: 50%;
+        text-align: left;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 1rem;
+        h3 {
+            text-align: center;
+        }
+    }
+}
+.tab {
+    position: relative;
+}
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+    max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+    color: black;
+
+    overflow: hidden;
+}
+.tab__label,
+.tab__close {
+    display: flex;
+    color: black;
+    background: white;
+    cursor: pointer;
+    margin: 2rem 0;
+    border: 2px solid;
+    border-radius: 0.5rem;
+}
+.tab__label {
+    justify-content: space-between;
+    padding: 1rem;
+}
+.tab__label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+    transform: rotate(270deg);
+}
+.tab__content p {
+    margin: 0;
+    padding: 1rem;
+}
+.tab__close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+.accordion--radio {
+    --theme: var(--secondary);
+}
+
+/* Arrow animation */
+.tab input:not(:checked) + .tab__label:hover::after {
+    animation: bounce 0.5s infinite;
+}
+.question a {
+    text-align: center;
+    margin: 0 auto;
+}
+.plan {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid $buttom-color;
+    border-radius: 10px;
+    box-shadow: 10px 10px 1px $main-color;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    h3 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    strong {
+        font-weight: 700;
+    }
+}
+.contact {
+    text-align: center;
+}
+.contact-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    img {
+        width: 40%;
+    }
+}
+.contact-text {
+    width: 40%;
+}
+
+.social {
+    background-image: url("../img/bg-social.png");
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    p,
+    h2 {
+        color: white;
+    }
+}
+.center-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    text-align: center;
+    form {
+        margin: 2rem 0;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+.right-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-align: center;
+    .social-links {
+        display: flex;
+        gap: 1rem;
+    }
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 1rem;
+    min-height: 20%;
+    img {
+        height: 30px;
+    }
+    .button-link {
+        height: 30px;
+        margin: 0 0.5rem;
+    }
+}
+@media (width<1000px) {
+    .right-column {
+        display: none;
+    }
+}
+@media (width<700px) {
+    .contact-content {
+        img {
+            width: 100%;
+        }
+    }
+    .contact-text {
+        width: 100%;
+    }
+    .right-column {
+        display: none;
+    }
+    .social {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .left-column {
+        text-align: center;
+    }
+    .center-column {
+        form {
+            margin: 1rem 0;
+        }
+    }
+}
+@media (width>450px) {
+    .wrapper {
+        padding: 1.5rem 0.5rem;
+    }
+    .button-link {
+        width: 200px;
+    }
+
+    .desktop-menu a {
+        font-size: 1rem;
+        .button-link {
+            width: 150px;
+        }
+    }
+    .abous-us-content {
+        .button-link {
+            width: 100%;
+        }
+    }
+}

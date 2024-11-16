@@ -1,0 +1,37 @@
+@media screen and (width<451px) {
+    .about-us {
+        text-align: center;
+    }
+    .abous-us-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+        margin: 2rem 0;
+    }
+    .about-us-img {
+        width: 50%;
+    }
+    .abous-us-img img {
+        width: 100%;
+    }
+    .abous-us-text p {
+        text-align: justify;
+        margin-bottom: 2.5rem;
+    }
+    .button-link-border-blue {
+        border: 1px solid blue;
+    }
+}
+
+@media (width>450px) {
+    .abous-us-content {
+        flex-flow: column nowrap;
+        gap: 2rem;
+    }
+    .about-us-img {
+        order: 1;
+    }
+    .abous-us-text {
+        order: 2;
+    }
+}

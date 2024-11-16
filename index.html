@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.scss" />
+        <link rel="stylesheet" href="css/header.scss" />
+        <title>Vite App</title>
+    </head>
+    <body>
+        <header class="wrapper">
+            <a>
+                <picture>
+                    <source srcset="img/logo-S.png" media="(max-width:400px)" />
+                    <source srcset="img/logo-M.png" media="(max-width:768px)" />
+                    <img src="img/logo-L.png" alt="logo" />
+                </picture>
+            </a>
+            <nav class="desktop-menu desktop-menu-position-links">
+                <a href="#">Про компанію</a>
+                <a href="#">Технології</a>
+                <a href="#">Тарифні плани</a>
+                <a href="#">Контакти</a>
+            </nav>
+            <div class="desktop-menu desktop-menu-position">
+                <a class="button-link">
+                    <span href="#">Приєднатися</span>
+                </a>
+            </div>
+            <nav class="mobile-menu">
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox">
+                    <span></span>
+                </label>
+                <div>
+                    <a href="#">Про компанію</a>
+                    <a href="#">Технології</a>
+                    <a href="#">Тарифні плани</a>
+                    <a href="#">Контакти</a>
+                    <a class="button-link">
+                        <span href="#">Приєднатися</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <picture>
+                    <source
+                        srcset="img/title-img-S.png"
+                        media="(max-width:768px)"
+                    />
+                    <img src="img/title-img-M.png" alt="logo" />
+                </picture>
+                <div>
+                    <h1>Дізнатися пропозиції</h1>
+                    <p>Більше можливостей з визнаним лідером серед VPN</p>
+                    <div class="bottuns">
+                        <a class="button-link button-link-icon">
+                            <span class="" href="#">Купити VPN</span>
+                        </a>
+                        <a class="button-link button-link-white">
+                            <span class="" href="#">Дізнатися пропозиції</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="about-us">
+                <h2>Про компанию</h2>
+                <div class="abous-us-content">
+                    <div class="abous-us-text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing
+                            elit dolor semper at ac tempus enim. Lorem ipsum
+                            dolor sit amet consectetur adipiscing elit dolor
+                            semper at ac tempus enim. Lorem ipsum dolor sit amet
+                            consectetur adipiscing elit dolor semper at ac
+                            tempus enim. Lorem ipsum dolor sit amet consectetur
+                            adipiscing elit dolor semper at ac tempus enim.
+                            Lorem ipsum dolor sit a at ac tempus enim. Lorem
+                            adipiscing elit dolor semper.
+                        </p>
+                        <a
+                            class="button-link button-link-white button-link-border-blue"
+                        >
+                            <span class="" href="#">Дізнатися пропозиції</span>
+                        </a>
+                    </div>
+                    <picture class="abous-us-img">
+                        <source
+                            srcset="img/about-us-img-S.png"
+                            media="(max-width:768px)"
+                        />
+                        <img src="./img/about-us.png" alt="picture" />
+                    </picture>
+                </div>
+            </section>
+            <section class="technologys">
+                <h2>Технології</h2>
+                <div class="technologys-content">
+                    <div>
+                        <h3>Захищені</h3>
+                        <p>
+                            Найпоширеніший варіант віртуальних приватних мереж.
+                            З його допомогою можливо створити надійну і захищену
+                            підмережу на основі ненадійної мережі, зазвичай,
+                            Інтернету. Прикладом захищених протоколів VPN є:
+                            Ipsec, SSL та PPTP. Прикладом використання протоколу
+                            SSL є програмне забезпечення OpenVPN.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Довірчі</h3>
+                        <p>
+                            Використовують у випадках, коли середовище, яким
+                            передають дані, можна вважати надійним і потрібно
+                            розв'язати лише завдання створення віртуальної
+                            підмережі в рамках більшої мережі. Питання
+                            забезпечення безпеки стають неактуальними.
+                            Прикладами подібних VPN рішень є: Multi-protocol
+                            label switching (MPLS) і L2tp (Layer 2 Tunnelling
+                            Protocol). (Коректніше сказати, що ці протоколи
+                            перекладають завдання забезпечення безпеки на інших,
+                            наприклад L2tp, як правило, використовують разом з
+                            Ipsec).
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="question">
+                <h2>Поширені запитання</h2>
+                <h3>Питання які можуть ваз зацікавити та допомогти</h3>
+                <div class="accordion">
+                    <div class="tab">
+                        <input
+                            type="checkbox"
+                            name="accordion-1"
+                            id="cb1"
+                            checked
+                        />
+                        <label for="cb1" class="tab__label"
+                            >Чи безпечно користуватися VPN?</label
+                        >
+                        <div class="tab__content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit id venenatis pretium risus
+                                euismod dictum egestas orci netus feugiat ut
+                                egestas ut sagittis tincidunt phasellus elit
+                                etiam cursus orci in. Id sed montes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb2" />
+                        <label for="cb2" class="tab__label"
+                            >Як обрати VPN?</label
+                        >
+                        <div class="tab__content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit id venenatis pretium risus
+                                euismod dictum egestas orci netus feugiat ut
+                                egestas ut sagittis tincidunt phasellus elit
+                                etiam cursus orci in. Id sed montes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb3" />
+                        <label for="cb3" class="tab__label"
+                            >Чи варто платити за конфіденційність в
+                            Інтернеті?</label
+                        >
+                        <div class="tab__content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit id venenatis pretium risus
+                                euismod dictum egestas orci netus feugiat ut
+                                egestas ut sagittis tincidunt phasellus elit
+                                etiam cursus orci in. Id sed montes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <input type="checkbox" name="accordion-1" id="cb4" />
+                        <label for="cb4" class="tab__label"
+                            >Чи повинна моя VPN бути включена постійно?</label
+                        >
+                        <div class="tab__content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit id venenatis pretium risus
+                                euismod dictum egestas orci netus feugiat ut
+                                egestas ut sagittis tincidunt phasellus elit
+                                etiam cursus orci in. Id sed montes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a
+                    class="button-link button-link-white button-link-border-blue"
+                >
+                    <span class="" href="#">Дізнатися пропозиції</span>
+                </a>
+            </section>
+            <section class="plan">
+                <h2>Тарифні плани</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    tortor eu egestas morbi sem vulputate etiam facilisis
+                    pellentesque ut quis.
+                </p>
+                <div class="cards">
+                    <div class="card">
+                        <img src="/img/Logo-S.png" alt="logo" />
+                        <h3>₴99/на місяць</h3>
+                        <strong>basic plan</strong>
+                        <p>
+                            Lorem ipsum dolor sit amet consectet adipiscing eli
+                            consectetur aliquet id enim neque turpis urna hen.
+                        </p>
+                        <a class="button-link">
+                            <span class="" href="#">Купити</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <img src="/img/Logo-S.png" alt="logo" />
+                        <h3>₴199/на місяць</h3>
+                        <strong>Growth plan</strong>
+                        <p>
+                            Lorem ipsum dolor sit amet consectet adipiscing eli
+                            consectetur aliquet id enim neque turpis urna hen.
+                        </p>
+                        <a class="button-link">
+                            <span class="" href="#">Купити</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <img src="/img/Logo-S.png" alt="logo" />
+                        <h3>₴399/на місяць</h3>
+                        <strong>enterprise plan</strong>
+                        <p>
+                            Lorem ipsum dolor sit amet consectet adipiscing eli
+                            consectetur aliquet id enim neque turpis urna hen.
+                        </p>
+                        <a class="button-link">
+                            <span class="" href="#">Купити</span>
+                        </a>
+                    </div>
+                </div>
+                <a
+                    class="button-link button-link-white button-link-border-blue"
+                >
+                    <span class="" href="#">Дізнатися пропозиції</span>
+                </a>
+            </section>
+            <section class="contact">
+                <h2>Контакти</h2>
+                <div class="contact-content">
+                    <img src="/img/contact-img.png" alt="f" />
+                    <div class="contact-text">
+                        <h3>Feature one</h3>
+                        <p>
+                            Web design partially overlaps web engineering in the
+                            broader scope of web development
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="social">
+                <div class="left-column">
+                    <img src="/img/social-logo.png" alt="logo" />
+                    <p>
+                        Copyright © 2023 BRIX<br />
+                        Templates | All Rights Reserved
+                    </p>
+                </div>
+                <div class="center-column">
+                    <h2>Підпишіться на нашу розсилку</h2>
+                    <form>
+                        <input type="text" />
+                        <a class="button-link">
+                            <span class="" href="#">Підписатися</span>
+                        </a>
+                    </form>
+                </div>
+                <div class="right-column">
+                    <h2>Слідкуй за нами</h2>
+                    <div class="social-links">
+                        <a href="#"
+                            ><img src="/img/linkedIn.png" alt="asd"
+                        /></a>
+                        <a href="#"
+                            ><img src="/img/Instagram.png" alt="asd"
+                        /></a>
+                        <a href="#"
+                            ><img src="/img/facebook.png" alt="asd"
+                        /></a>
+                        <a href="#"><img src="/img/Twitter.png" alt="asd" /></a>
+                        <a href="#"><img src="/img/youtube.png" alt="asd" /></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>
+                Цей сайт використовує файли cookies для роботи і покращення
+                сервісу. Дізнайтесь більше в Політика конфіденційності
+            </p>
+            <a class="button-link">
+                <span class="" href="#">Прийняти</span>
+            </a>
+            <img src="/img/Close.png" alt="close" />
+        </footer>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>

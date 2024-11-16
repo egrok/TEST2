@@ -1,0 +1,48 @@
+@media screen and (width<451px) {
+    .hero {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        div {
+            padding: 1rem 0rem;
+            a {
+                vertical-align: middle;
+            }
+        }
+    }
+    .bottuns {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .button-link-icon {
+        display: inline-block;
+    }
+    .button-link-icon::after {
+        content: " ";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("../img/arrow-right.png");
+        background-repeat: no-repeat;
+        position: relative;
+        left: 10px;
+    }
+}
+@media (width>550px) {
+    .hero {
+        display: flex;
+    }
+    .hero picture {
+        order: 2;
+    }
+    .hero div {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .bottuns {
+        display: flex;
+        gap: 5rem;
+    }
+}
