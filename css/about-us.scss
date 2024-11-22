@@ -1,37 +1,74 @@
-@media screen and (width<451px) {
-    .about-us {
-        text-align: center;
-    }
-    .abous-us-content {
-        display: flex;
-        justify-content: space-between;
-        gap: 5rem;
-        margin: 2rem 0;
-    }
-    .about-us-img {
-        width: 50%;
-    }
-    .abous-us-img img {
-        width: 100%;
-    }
-    .abous-us-text p {
-        text-align: justify;
-        margin-bottom: 2.5rem;
-    }
-    .button-link-border-blue {
-        border: 1px solid blue;
+$buttom-color: #004996;
+.about-us {
+    text-align: center;
+    h2 {
+        font-size: 3rem;
     }
 }
-
-@media (width>450px) {
+.abous-us-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 2rem 0;
+}
+.about-us-img {
+    flex: 1 0 50%;
+}
+.abous-us-img img {
+    width: 100%;
+    height: 100%;
+}
+.abous-us-text {
+    flex: 1 0 50%;
+}
+.abous-us-text p {
+    text-align: justify;
+    margin-bottom: 2.5rem;
+}
+.button-link {
+    width: 40%;
+    height: 60px;
+    border-radius: 30px;
+    background-color: $buttom-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.3rem;
+    text-align: center;
+    align-self: center;
+    span {
+        color: white;
+    }
+}
+.button-link-white {
+    background: white;
+    border: 1px solid #004996;
+    span {
+        color: black;
+        font-size: 0.9rem;
+    }
+}
+@media (width<768px) {
+    .about-us {
+        h2 {
+            font-size: 2rem;
+        }
+    }
     .abous-us-content {
         flex-flow: column nowrap;
-        gap: 2rem;
+        gap: 0;
     }
     .about-us-img {
         order: 1;
     }
+    .abous-us-img img {
+        width: 100%;
+        height: 50vh;
+    }
     .abous-us-text {
         order: 2;
+    }
+    .button-link {
+        width: 100%;
     }
 }

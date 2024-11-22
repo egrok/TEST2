@@ -34,10 +34,10 @@
                     <span></span>
                 </label>
                 <div>
-                    <a href="#">Про компанію</a>
-                    <a href="#">Технології</a>
-                    <a href="#">Тарифні плани</a>
-                    <a href="#">Контакти</a>
+                    <a class="mobile-a" href="#">Про компанію</a>
+                    <a class="mobile-a" href="#">Технології</a>
+                    <a class="mobile-a" href="#">Тарифні плани</a>
+                    <a class="mobile-a" href="#">Контакти</a>
                     <a class="button-link">
                         <span href="#">Приєднатися</span>
                     </a>
@@ -54,8 +54,13 @@
                     <img src="img/title-img-M.png" alt="logo" />
                 </picture>
                 <div>
-                    <h1>Дізнатися пропозиції</h1>
-                    <p>Більше можливостей з визнаним лідером серед VPN</p>
+                    <div class="hero-text">
+                        <h1>
+                            Український VPN-сервіс стане гарантованим помічником
+                        </h1>
+                        <p>Більше можливостей з визнаним лідером серед VPN</p>
+                    </div>
+
                     <div class="bottuns">
                         <a class="button-link button-link-icon">
                             <span class="" href="#">Купити VPN</span>
@@ -81,9 +86,7 @@
                             Lorem ipsum dolor sit a at ac tempus enim. Lorem
                             adipiscing elit dolor semper.
                         </p>
-                        <a
-                            class="button-link button-link-white button-link-border-blue"
-                        >
+                        <a class="button-link button-link-white">
                             <span class="" href="#">Дізнатися пропозиції</span>
                         </a>
                     </div>
@@ -106,10 +109,14 @@
                             З його допомогою можливо створити надійну і захищену
                             підмережу на основі ненадійної мережі, зазвичай,
                             Інтернету. Прикладом захищених протоколів VPN є:
-                            Ipsec, SSL та PPTP. Прикладом використання протоколу
-                            SSL є програмне забезпечення OpenVPN.
+                            <span class="underline">Ipsec</span>,
+                            <span class="underline">SSL</span> та
+                            <span class="underline">PPTP</span>. Прикладом
+                            використання протоколу SSL є програмне забезпечення
+                            <span class="underline">OpenVPN</span>.
                         </p>
                     </div>
+                    <hr />
                     <div>
                         <h3>Довірчі</h3>
                         <p>
@@ -119,85 +126,68 @@
                             підмережі в рамках більшої мережі. Питання
                             забезпечення безпеки стають неактуальними.
                             Прикладами подібних VPN рішень є: Multi-protocol
-                            label switching (MPLS) і L2tp (Layer 2 Tunnelling
-                            Protocol). (Коректніше сказати, що ці протоколи
-                            перекладають завдання забезпечення безпеки на інших,
-                            наприклад L2tp, як правило, використовують разом з
-                            Ipsec).
+                            label switching (<span class="underline">MPLS</span
+                            >) і <span class="underline">L2tp</span> (Layer 2
+                            Tunnelling Protocol). (Коректніше сказати, що ці
+                            протоколи перекладають завдання забезпечення безпеки
+                            на інших, наприклад L2tp, як правило, використовують
+                            разом з Ipsec).
                         </p>
                     </div>
                 </div>
             </section>
+
+
+
+
+
             <section class="question">
                 <h2>Поширені запитання</h2>
                 <h3>Питання які можуть ваз зацікавити та допомогти</h3>
                 <div class="accordion">
-                    <div class="tab">
-                        <input
-                            type="checkbox"
-                            name="accordion-1"
-                            id="cb1"
-                            checked
-                        />
-                        <label for="cb1" class="tab__label"
-                            >Чи безпечно користуватися VPN?</label
-                        >
-                        <div class="tab__content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
+                    <details>
+                        <summary>Чи безпечно користуватися VPN?</summary>
+                        <p>
+                            That's exactly the reason we created this random
+                            question generator. There are hundreds of random
+                            questions to choose from so you're able to find the
+                            perfect random question to ask friends, family and
+                            people you want to get to know better.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Як обрати VPN?</summary>
+                        <p>
+                            <p>Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit id venenatis pretium risus
                                 euismod dictum egestas orci netus feugiat ut
                                 egestas ut sagittis tincidunt phasellus elit
-                                etiam cursus orci in. Id sed montes.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input type="checkbox" name="accordion-1" id="cb2" />
-                        <label for="cb2" class="tab__label"
-                            >Як обрати VPN?</label
-                        >
-                        <div class="tab__content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
+                                etiam cursus orci in. Id sed montes.</p>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Чи варто платити за конфіденційність в
+                            Інтернеті?</summary>
+                        <p>
+                            <p>Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit id venenatis pretium risus
                                 euismod dictum egestas orci netus feugiat ut
                                 egestas ut sagittis tincidunt phasellus elit
-                                etiam cursus orci in. Id sed montes.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input type="checkbox" name="accordion-1" id="cb3" />
-                        <label for="cb3" class="tab__label"
-                            >Чи варто платити за конфіденційність в
-                            Інтернеті?</label
-                        >
-                        <div class="tab__content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
+                                etiam cursus orci in. Id sed montes.</p>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>
+                            Чи повинна моя VPN бути включена постійно?
+                        </summary>
+                        <p>
+                            <p>Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit id venenatis pretium risus
                                 euismod dictum egestas orci netus feugiat ut
                                 egestas ut sagittis tincidunt phasellus elit
-                                etiam cursus orci in. Id sed montes.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="tab">
-                        <input type="checkbox" name="accordion-1" id="cb4" />
-                        <label for="cb4" class="tab__label"
-                            >Чи повинна моя VPN бути включена постійно?</label
-                        >
-                        <div class="tab__content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit id venenatis pretium risus
-                                euismod dictum egestas orci netus feugiat ut
-                                egestas ut sagittis tincidunt phasellus elit
-                                etiam cursus orci in. Id sed montes.
-                            </p>
-                        </div>
-                    </div>
+                                etiam cursus orci in. Id sed montes.</p>
+                        </p>
+                    </details>
                 </div>
                 <a
                     class="button-link button-link-white button-link-border-blue"

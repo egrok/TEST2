@@ -46,32 +46,16 @@ p {
     color: $main-color;
     margin: 0.5rem 0;
 }
-.button-link {
-    width: 150px;
-    height: 60px;
-    border-radius: 30px;
-    background-color: $buttom-color;
+
+.mobile-a {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.3rem;
-    text-align: center;
-    span {
-        color: white;
-    }
-}
-.button-link-white {
-    background: white;
-    span {
-        color: black;
-        font-size: 0.9rem;
-    }
+    justify-content: left !important;
 }
 main {
     background-color: $main-bg-color;
 }
 section {
-    padding: 0.5rem;
+    padding: 1.5rem;
 }
 .technologys {
     text-align: center;
@@ -90,73 +74,72 @@ section {
         padding: 1rem;
         h3 {
             text-align: center;
+            font-weight: bold;
         }
     }
+    hr {
+        width: 1px;
+        height: 305px;
+        background-color: #adabc3;
+        opacity: 0.5;
+        border: 1px solid;
+        margin: 2rem 0;
+    }
 }
-.tab {
-    position: relative;
+.underline {
+    text-underline-position: under;
+    text-decoration: underline;
 }
-.tab input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-.tab__content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.35s;
-}
-.tab input:checked ~ .tab__content {
-    max-height: 10rem;
-}
-
-/* Visual styles */
-.accordion {
-    color: black;
-
-    overflow: hidden;
-}
-.tab__label,
-.tab__close {
-    display: flex;
-    color: black;
-    background: white;
-    cursor: pointer;
-    margin: 2rem 0;
-    border: 2px solid;
-    border-radius: 0.5rem;
-}
-.tab__label {
-    justify-content: space-between;
-    padding: 1rem;
-}
-.tab__label::after {
-    content: "\276F";
-    width: 1em;
-    height: 1em;
+.question {
     text-align: center;
-    transform: rotate(90deg);
-    transition: all 0.35s;
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 }
-.tab input:checked + .tab__label::after {
-    transform: rotate(270deg);
+.accordion {
+    max-width: 900px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
 }
-.tab__content p {
-    margin: 0;
+details {
+    margin-bottom: 10px;
+    border: 1px solid $main-color;
     padding: 1rem;
+    border-radius: 25px;
+    background-color: white;
+    text-align: left;
 }
-.tab__close {
-    justify-content: flex-end;
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+summary::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(/img/arrow.png);
+    background-position: center;
+    background-size: contain;
+    order: 2;
+    transform: rotate(-90deg);
 }
-.accordion--radio {
-    --theme: var(--secondary);
+details:focus {
+    flex-flow: column nowrap;
 }
-
-/* Arrow animation */
-.tab input:not(:checked) + .tab__label:hover::after {
-    animation: bounce 0.5s infinite;
+details[open] > summary::before {
+    transform: rotate(0deg);
+}
+details > summary {
+    color: black;
+    padding: 5px 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
 .question a {
     text-align: center;
@@ -211,6 +194,10 @@ section {
 }
 .contact-text {
     width: 40%;
+    text-align: left;
+}
+.contact-text h3 {
+    font-weight: bold;
 }
 
 .social {
@@ -227,13 +214,21 @@ section {
 .center-column {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     form {
         margin: 2rem 0;
         display: flex;
         gap: 1rem;
         align-items: center;
+        input {
+            border-radius: 5px;
+
+            height: 30px;
+        }
+    }
+    .button-link {
+        height: 30px;
     }
 }
 .right-column {
@@ -250,7 +245,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: auto;
     padding: 1rem;
     min-height: 20%;
     img {
@@ -259,14 +254,44 @@ footer {
     .button-link {
         height: 30px;
         margin: 0 0.5rem;
+        width: 130px;
     }
 }
 @media (width<1000px) {
     .right-column {
         display: none;
     }
+
+    .left-column p {
+        display: none;
+    }
+    .social {
+        justify-content: center;
+    }
 }
 @media (width<700px) {
+    .technologys-content {
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 3rem;
+        div {
+            width: 100%;
+        }
+        hr {
+            transform: rotate(90deg);
+            margin: -8rem;
+            height: 70vw;
+        }
+    }
+    details > summary {
+        color: black;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .contact-content {
         img {
             width: 100%;
@@ -275,12 +300,17 @@ footer {
     .contact-text {
         width: 100%;
     }
+    .left-column p {
+        display: block;
+    }
     .right-column {
         display: none;
     }
+
     .social {
         flex-flow: column nowrap;
         align-items: center;
+        justify-content: center;
     }
     .left-column {
         text-align: center;
@@ -291,23 +321,30 @@ footer {
         }
     }
 }
-@media (width>450px) {
+@media (width<450px) {
     .wrapper {
         padding: 1.5rem 0.5rem;
     }
     .button-link {
         width: 200px;
     }
-
+    .center-column form {
+        margin: 0rem 0;
+    }
+    section > .social {
+        padding: 0.5rem;
+    }
     .desktop-menu a {
         font-size: 1rem;
         .button-link {
             width: 150px;
         }
     }
-    .abous-us-content {
-        .button-link {
-            width: 100%;
+    .center-column {
+        form {
+            input {
+                width: 110%;
+            }
         }
     }
 }
